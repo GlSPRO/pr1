@@ -1,0 +1,60 @@
+import math
+print("1. сложение")
+print("2. вычитание")
+print("3. умножение")
+print("4. деление")
+print("5. возведения в степень")
+print("6. квадратный корень")
+print("7. факториал")
+print("8. синус")
+print("9. косинус")
+print("10. тангенс")
+x = int(input("Введите номер действия"))
+m = 0
+y = ""
+z = ""
+if x < 5:
+    while (y.isdigit() != True) or (z.isdigit() != True):
+        y = input("Введите первое число")
+        z = input("Введите второе число")
+    z = int(z)
+    y = int(y)
+    if x == 1:
+       m = y + z
+       print("Результат:", m)
+    elif x == 2:
+          m = y - z
+          print("Результат:", m)
+    elif x == 3:
+        m = y * z
+        print("Результат:", m)
+    elif x == 4:
+        m = y / z
+        print("Результат:", m)
+if x == 5:
+     y = int(input("Введите число"))
+     z = int(input("В какую степень возвести число?"))
+     m = y ** z
+     print("Результат:", m)
+if (x >= 6) and (x <= 10):
+    while (y.isdigit() != True):
+        y = input("Введите число")
+    y = int(y)
+    if x == 6:
+        m = y ** 0.5
+        print("Результат:", m)
+    if x == 7:
+        factorial = 1
+        while y > 1:
+            factorial = factorial * y
+            y = y - 1
+        print(factorial)
+    if x == 8:
+        m = math.sin(math.radians(y))
+        print("Результат:", m)
+    if x == 9:
+        m = math.cos(math.radians(y))
+        print("Результат:", m)
+    if x == 10:
+        m = math.tan(math.radians(y))
+        print("Результат:", m)
