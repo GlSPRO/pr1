@@ -29,8 +29,12 @@ if x < 5:
         m = y * z
         print("Результат:", m)
     elif x == 4:
-        m = y / z
-        print("Результат:", m)
+        if z > 0:
+            m = y / z
+            print("Результат:", m)
+        else:
+            print("На ноль делить нельзя")
+
 if x == 5:
      y = int(input("Введите число"))
      z = int(input("В какую степень возвести число?"))
@@ -50,11 +54,11 @@ if (x >= 6) and (x <= 10):
             y = y - 1
         print(factorial)
     if x == 8:
-        m = math.sin(y)
+        m = math.sin(math.radians(y))
         print("Результат:", m)
     if x == 9:
-        m = math.cos(y)
+        m = math.cos(math.radians(y))
         print("Результат:", m)
     if x == 10:
-        m = math.tan(y)
+        m = math.tan(math.radians(y))
         print("Результат:", m)
