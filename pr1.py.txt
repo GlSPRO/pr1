@@ -9,6 +9,9 @@ print("7. факториал")
 print("8. синус")
 print("9. косинус")
 print("10. тангенс")
+print("11. Площадь прямоугольника")
+print("12. Сумма чисел положительного числа")
+print("13. True, если число четное, и False, если нечетное")
 x = int(input("Введите номер действия"))
 m = 0
 y = ""
@@ -34,7 +37,6 @@ if x < 5:
             print("Результат:", m)
         else:
             print("На ноль делить нельзя")
-
 if x == 5:
      y = int(input("Введите число"))
      z = int(input("В какую степень возвести число?"))
@@ -62,3 +64,27 @@ if (x >= 6) and (x <= 10):
     if x == 10:
         m = math.tan(math.radians(y))
         print("Результат:", m)
+if x == 11:
+    def rectangle_area(y, z):
+        y = int(input("Введите ширину"))
+        z = int(input("Введите длину"))
+        m = y * z
+        return m
+    m = rectangle_area(y, z)
+    print("Результат:", m)
+if x == 12:
+    y = int(input("Введите число"))
+    def sum_digits(y):
+        sum_digits = 0
+        for digit in str(y):
+            sum_digits += int(digit)
+        return sum_digits
+    print(sum_digits(y))
+if x == 13:
+    y = int(input("Введите число"))
+    def is_even(y):
+        if y % 2 == 0:
+            return True
+        else:
+            return False
+    print(is_even(y))
